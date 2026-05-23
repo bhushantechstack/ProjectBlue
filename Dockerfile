@@ -52,4 +52,7 @@ ENV SPRING_PROFILES_ACTIVE=prod
 # -Xss512k: Stack size limit (512KB)
 # -Xms150m: Initial heap size (150MB)
 # -Xmx300m: Maximum heap size (300MB)
-ENTRYPOINT ["java", "-XX:+UseSerialGC", "-Xss512k", "-Xms150m", "-Xmx300m", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-XX:+UseSerialGC", "-Xss512k", "-Xms128m", "-Xmx256m", "-jar", "app.jar"]
+
+
+
