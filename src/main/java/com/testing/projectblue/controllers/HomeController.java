@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.testing.projectblue.pojo.ProjectBlue;
 import com.testing.projectblue.repositories.HomeRepo;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class HomeController {
     @Autowired
     private HomeRepo homeRepo;
